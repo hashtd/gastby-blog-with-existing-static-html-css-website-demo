@@ -24,6 +24,7 @@
     "gatsby-source-filesystem": "^2.3.32",
     "gatsby-transformer-remark": "^2.8.37",
     "gatsby-transformer-sharp": "^2.5.16",
+    "http-server": "^0.12.3",
     "prismjs": "^1.21.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -45,7 +46,9 @@
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build:all": "rm -rf dist/ && mkdir -p dist/blog && npm run build && cp -r public/* dist/blog/ && cp -r main-site/* dist/",
+    "build:preview": "npm run build:all && http-server dist -o",
+    "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
