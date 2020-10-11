@@ -8,12 +8,13 @@ Following command will generate blog pages & merge files from `main-site` folder
 `dist` folder you can deploy it to any hosting provider
 
 ```bash
-yarn build:preview
+npm install
+npm run build:preview
 ```
 
 # Netlify Deploy
 for netlify see the [docs for details](https://docs.netlify.com/configure-builds/get-started/#basic-build-settings)
 
- - Build command : `yarn build:all`
+ - Build command : `npm run build:all`
  - Publish directory : `dist`
 
