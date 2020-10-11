@@ -3,9 +3,12 @@
 
 Structure of this project is based on starter blog
 
-Following command will generate blog pages & merge files from `main-site` folder into `dist` folder
+ - `main-site` : Your static html/css website
+ - `src` : Gastby project files
 
-`dist` folder you can deploy it to any hosting provider
+Following commands will generate blog pages & merge files from `main-site` folder into `dist` folder
+
+`dist` folder you can deploy it to any hosting provider.
 
 ```bash
 npm install
